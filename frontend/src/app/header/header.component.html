@@ -1,0 +1,14 @@
+<mat-toolbar class="navbar">
+  <div class="content-container">
+    <span>{{ title }}</span>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>timeline</mat-icon><span>Stocks</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>account_circle</mat-icon><span>User settings</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
