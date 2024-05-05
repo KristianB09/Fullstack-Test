@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +6,5 @@ import { MatMenuTrigger } from '@angular/material/menu';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
-
-  buttonMenu() {
-    this.trigger.openMenu();
-  }
-
   title = 'Stocks frontend test';
 }

@@ -22,3 +22,7 @@ h1 {
   padding: 24px 32px;
   font-size: 18px;
 }
+
+.buttons-container .stock-button {
+  background-color: hsl(0, 0%, 96%);
+}

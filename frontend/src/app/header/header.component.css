@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   justify-content: center;
+  background-color: hsl(0, 0%, 96%);
 }
 
 .content-container {
@@ -12,5 +13,5 @@
 .button-container {
   display: flex;
   justify-content: space-between;
-  width: 150px;
+  width: 170px;
 }
