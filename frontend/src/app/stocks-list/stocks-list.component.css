@@ -1,0 +1,10 @@
+.stock-card-container {
+  width: 90%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stock-card {
+  width: 350px;
+}
