@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { Stock } from '../interfaces/stock';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Stock } from '../interfaces/stock';
 })
 export class StocksService {
   constructor(private http: HttpClient) {}
-
+  private baseUrl = 'https://localhost:7005';
   private stocksUrl = 'api/stock';
 
   /**
@@ -31,13 +31,13 @@ export class StocksService {
 
   getStocks(): Observable<Stock[]> {
     return this.http
-      .get<Stock[]>(`https://localhost:7005/${this.stocksUrl}`)
+      .get<Stock[]>(`${this.baseUrl}/${this.stocksUrl}`)
       .pipe(catchError(this.handleError<Stock[]>('getStocks', [])));
   }
 
   getStock(id: number): Observable<Stock> {
     return this.http
-      .get<Stock>(`https://localhost:7005/${this.stocksUrl}/${id}`)
+      .get<Stock>(`${this.baseUrl}/${this.stocksUrl}/${id}`)
       .pipe(catchError(this.handleError<Stock>(`getStock id = ${id}`)));
   }
 }
